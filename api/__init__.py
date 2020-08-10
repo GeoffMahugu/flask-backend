@@ -27,8 +27,5 @@ class TestPostAPI(Resource):
 # Test GET Api
 api.add_resource(TestGetAPI, '/test-get')
 
-# Test Igraph Api
-api.add_resource(TestIGraphAPI, '/test-igraph')
-
 # Test Post Api
 api.add_resource(TestPostAPI, '/test-post')

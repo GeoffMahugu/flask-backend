@@ -21,7 +21,7 @@ def create_app():
     # Init AgilionPy
     @app.route('/')
     def InitApp():
-        return 'Agilion Inc Software'
+        return 'App Init'
     return app
 
 

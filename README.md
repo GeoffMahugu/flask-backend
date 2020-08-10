@@ -1,5 +1,11 @@
-# FLASK MICROSERVICE APP 🚀
+# FLASK BACKEND APP 🐍
 This is a simple Flask-API boilerplate to help you quickly get started with setting up and deploying your python project.
+Here are some of the features of the setup:
+
+1. Docker Ready
+2. Kubernetes Ready
+3. Deployment Ready
+4. [Working on] Auth
 
 ## Prerequisites:
 

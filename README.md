@@ -1,6 +1,5 @@
-# AGILIONPY MICRO-SERVICE APP
-This file contains documentaion on the python backend.
-This project is meant to liverage python's data processing and provide an API.
+# FLASK MICROSERVICE APP 🚀
+This is a simple Flask-API boilerplate to help you quickly get started with setting up and deploying your python project.
 
 ## Prerequisites:
 
@@ -14,11 +13,11 @@ ii) Installed [docker-compose](https://docs.docker.com/compose/install/)
 ## STEP 1: Clone Project
 To clone the project, run this command:
 
-``git clone git@gitlab.com:agilion/python.git``
+``git clone git@github.com:GeoffMahugu/flask-backend.git``
 
 Cd into project directory:
 
- ``cd python``
+ ``cd flask-backend``
 
  ## STEP 2: Setup Environment
 There are 2 states the app can run: 
@@ -111,21 +110,7 @@ response:
 }
 ``
 
-**ii) Test Graph-Request**
-
-url: ``http://127.0.0.1:5000/api/test-igraph``
-
-protocal: GET
-
-response:
-
-``
-{
-  "Message": "Igraph setup"
-}
-``
-
-**ii) Test POST-Request **
+**ii) Test POST-Request**
 
 url: ``http://127.0.0.1:5000/api/test-igraph``
 
@@ -155,4 +140,3 @@ response:
  This is alist of usefull resources:
 1. (Docker Docs)[https://docs.docker.com/get-started/]
 2. (flask_restful)[https://flask-restful.readthedocs.io/en/latest/quickstart.html]
-3. (iGraph Docs)[https://igraph.org/python/doc/tutorial/tutorial.html]

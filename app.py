@@ -18,7 +18,6 @@ def create_app():
     app.config.from_object('config')
     api.api.init_app(app)
 
-    # Init AgilionPy
     @app.route('/')
     def InitApp():
         return 'App Init'

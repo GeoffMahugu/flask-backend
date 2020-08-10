@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request
 from flask_restful import Api, Resource, reqparse
 
 import config
-import igraph
 from pprint import pprint
 
 api = Api(prefix=config.API_PREFIX)
@@ -14,16 +13,6 @@ parser = reqparse.RequestParser()
 class TestGetAPI(Resource):
     def get(self):
         return {'You are task home': 'API 1 Done'}, 201
-
-
-class TestIGraphAPI(Resource):
-    def get(self):
-        print('Bellow is the test version -----------')
-        print(igraph.__version__)
-        g = igraph.Graph()
-        g.add_vertices(3)
-        pprint(g)
-        return {'Message': 'Igraph setup'}, 201
 
 
 class TestPostAPI(Resource):

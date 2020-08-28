@@ -5,7 +5,6 @@ Here are some of the features of the setup:
 1. Docker Ready
 2. Kubernetes Ready
 3. Deployment Ready
-4. [Working on] Auth
 
 ## Prerequisites:
 

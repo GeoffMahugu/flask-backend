@@ -1,4 +1,5 @@
-# FLASK BACKEND APP 🐍
+# RestFull Flask Backend
+
 This is a simple Flask-API boilerplate to help you quickly get started with setting up and deploying your python project.
 Here are some of the features of the setup:
 
@@ -6,60 +7,61 @@ Here are some of the features of the setup:
 2. Kubernetes Ready
 3. Deployment Ready
 
-## Prerequisites:
+### Prerequisites:
 
-i) Installed [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+i) [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-i) Installed [Docker](https://docs.docker.com/engine/install/ubuntu/)
+ii) [Install Docker](https://docs.docker.com/engine/install/ubuntu/)
 
-ii) Installed [docker-compose](https://docs.docker.com/compose/install/)
+iii) [Install docker-compose](https://docs.docker.com/compose/install/)
 
 
-## STEP 1: Clone Project
+### STEP 1: Clone Project
+
 To clone the project, run this command:
 
 ``git clone git@github.com:GeoffMahugu/flask-backend.git``
 
-Cd into project directory:
+cd into project directory:
 
  ``cd flask-backend``
 
- ## STEP 2: Setup Environment
+ ### STEP 2: Setup Environment
+ 
 There are 2 states the app can run: 
 
 i) **DevConfig**: Has debug congigurations set on
 
 ii) **ProdConfig**: This configuration has debug set off
 
-To set the environments run this:
-ENV_CONFIG: being either DevConfig or ProdConfig
+To set the environments run this(This sets the environment variable in memmory - Do same in prod server):
+
+**ENV_CONFIG**: being either DevConfig or ProdConfig
 
 ``export APP_ENV=<ENV_CONFIG>``
 
- ## STEP 2: Run Project
+ ### STEP 3: Run Project
 
  To run the project:
 
-### Using Docker
+#### Using Docker
 
-i). Build
+**i. Build**
 
  ``docker-compose -f "docker-compose.yaml" up -d --build``
  
-ii.) Run app
+**ii. Run app**
 
  ``docker-compose up``
 
  To read more on docker: (link ☞)[README_Docker.md]
 
-**Note**
-
-During development, remember to build the image before runing the image. (That might just be the reason you are not seeing your upates)
+**NOTE:** During development, remember to build the image before runing the image. (That might just be the reason you are not seeing your upates)
 
 
- ### Using PipEnv
+ #### Using PipEnv
 
-i). Install PipEnv
+**i. Install PipEnv**
 
 Check version to make sure you are running python3
 
@@ -69,23 +71,23 @@ Proceed to install PipEnv
 
 ``pip3 install pipenv``
 
-ii). Activate the Env
+**ii. Activate the Env**
 
 To activate the environment, run this command:
 **PS:** Will auto pick the configs from the (requirements.txt)[./requirements.txt] file.
 
 ``pipenv shell``
 
-iii) Install dependancies
+**iii. Install dependancies**
 
 ``pipenv install``
 
-iv) Run project
+**iv. Run project**
 
 ``python3 app.py``
 
 
-# PROJECT SETUP
+### PROJECT SETUP
 
 ✦ [/api](./api) This directory contains configurations for setting up the business logic
 Contains configurations for setting up API's
@@ -99,49 +101,59 @@ Contains configurations for setting up API's
 ✦ [/tasks](./tasks) Contains configurations for any messaging process e.g Celery
 
 
-## API DOCUMENATION
+### API DOCUMENATION
 
-**i) Test Get-Request**
+**i. Test Get-Request**
 
-url: ``http://127.0.0.1:5000/api/test-get``
+**url**: ``http://127.0.0.1:5000/api/test-get``
 
-protocal: GET
+**protocol**: GET
 
-response:
+**response**:
 
-``
-{
-  "You are task home": "API 1 Done"
-}
-``
+```
+	{
+	  "You are task home": "API 1 Done"
+	}
+```
 
-**ii) Test POST-Request**
+**ii. Test POST-Request**
 
-url: ``http://127.0.0.1:5000/api/test-igraph``
+**url**: ``http://127.0.0.1:5000/api/test-igraph``
 
-protocal: POST
+**protocol**: POST
 
-request: 
+**request**: 
 
-``
-{
-  "name": "John Doe",
-	"uuid": "=_ueyJhbGciOiJSUzI1NiIsImtp="
-}
-``
+```
+	{
+	  "name": "John Doe",
+		"uuid": "=_ueyJhbGciOiJSUzI1NiIsImtp="
+	}
+```
 
-response:
+**response**:
 
-``
-{
-  "name": "John Doe",
-  "uuid": "=_ueyJhbGciOiJSUzI1NiIsImtp=",
-  "message": "Data has been processed"
-}
-``
+```
+	{
+	  "name": "John Doe",
+	  "uuid": "=_ueyJhbGciOiJSUzI1NiIsImtp=",
+	  "message": "Data has been processed"
+	}
+```
 
-## RESOURCES
+### RESOURCES
 
- This is alist of usefull resources:
-1. (Docker Docs)[https://docs.docker.com/get-started/]
-2. (flask_restful)[https://flask-restful.readthedocs.io/en/latest/quickstart.html]
+This is a ist of usefull resources:
+
+1. [Docker Docs](https://docs.docker.com/get-started/)
+2. [flask_restful](https://flask-restful.readthedocs.io/en/latest/quickstart.html)
+
+
+### Conclusion
+
+Feel free to use the project as a boilerplate to get you up and running quickly.
+
+Any Pull Requests to improve the project and help other **Python** developers will be much appreciated 😀
+
+With  from the creator ❤️
